@@ -1,0 +1,57 @@
+/* Additions on top of Strata (main.css) for jingyiliu1900.github.io */
+
+/* Videos and figures inside the main column */
+#main video {
+	display: block;
+	width: 100%;
+	height: auto;
+	border-radius: 0.35em;
+	background: #000;
+}
+
+.media-grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 1em;
+	margin: 0 0 1.5em 0;
+}
+
+.media-grid.single {
+	grid-template-columns: minmax(0, 1fr);
+}
+
+.media-grid img {
+	display: block;
+	width: 100%;
+	height: auto;
+	border-radius: 0.35em;
+}
+
+@media screen and (max-width: 480px) {
+	.media-grid {
+		grid-template-columns: minmax(0, 1fr);
+	}
+}
+
+.caption {
+	font-size: 0.9em;
+	color: #a2a2a2;
+	margin-top: -0.75em;
+}
+
+/* Gallery thumbs: crop real figures to a uniform shape */
+.work-item .image.thumb img {
+	aspect-ratio: 370 / 217;
+	object-fit: cover;
+	background: #fff;
+}
+
+/* Reference list on research pages */
+ol.refs li {
+	margin-bottom: 0.75em;
+}
+
+.back-link {
+	display: inline-block;
+	margin-bottom: 2em;
+}
