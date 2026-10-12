@@ -4,12 +4,20 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html>
+<html lang="en">
 	<head>
-		<title>Flow Physics and Nutrient Transport in Ciliates – Jingyi Liu (Jenny)</title>
+		<title>Flow Physics and Nutrient Transport in Ciliates – Jingyi Liu</title>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="description" content="Jingyi Liu (Jenny), Theory Fellow at Janelia Research Campus, HHMI. Fluid dynamics, biophysics, and physics-aware machine learning." />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="How flow physics shapes feeding in swimming and attached ciliates: hydrodynamic equivalence, Péclet-number-dependent optimal cilia motion, and feeding in concentration gradients." />
+		<meta name="author" content="Jingyi Liu" />
+		<link rel="canonical" href="https://jingyiliu1900.github.io/ciliates.html" />
+		<meta property="og:type" content="article" />
+		<meta property="og:title" content="Flow Physics and Nutrient Transport in Ciliates – Jingyi Liu" />
+		<meta property="og:description" content="How flow physics shapes feeding in swimming and attached ciliates: hydrodynamic equivalence, Péclet-number-dependent optimal cilia motion, and feeding in concentration gradients." />
+		<meta property="og:url" content="https://jingyiliu1900.github.io/ciliates.html" />
+		<meta property="og:image" content="https://jingyiliu1900.github.io/media/2024/08/Screenshot-2024-08-26-at-10.56.54-PM-1024x478.png" />
+		<meta name="twitter:card" content="summary_large_image" />
 		<link rel="icon" href="media/2024/09/cropped-xiaohei-1-270x270.jpeg" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/custom.css" />
@@ -19,10 +27,19 @@
 		<!-- Header -->
 			<header id="header">
 				<div class="inner">
-					<a href="index.html" class="image avatar"><img src="media/2024/09/cropped-xiaohei-1-270x270.jpeg" alt="Jingyi Liu" /></a>
-					<h1><strong>I am Jingyi Liu (Jenny)</strong>, a Theory Fellow at Janelia Research Campus, HHMI. <br />
+					<a href="index.html" class="image avatar"><img src="images/profile.jpg" width="400" height="400" alt="Portrait of Jingyi Liu" /></a>
+					<h1><strong>I am Jingyi Liu</strong>, a Theory Fellow at Janelia Research Campus, HHMI. <br />
 					Ph.D. in Mechanical Engineering, USC. <br />
 					Seeking art in physics.</h1>
+					<nav aria-label="Sections">
+						<ul class="side-nav">
+							<li><a href="index.html#research">Research</a></li>
+							<li><a href="index.html#publications">Publications</a></li>
+							<li><a href="index.html#projects">Projects</a></li>
+							<li><a href="index.html#ml-notes">ML &amp; Notes</a></li>
+							<li><a href="index.html#contact">Contact</a></li>
+						</ul>
+					</nav>
 				</div>
 			</header>
 
@@ -30,42 +47,46 @@
 			<div id="main">
 
 				<section id="one">
-					<a href="index.html" class="back-link icon solid fa-arrow-left"> Back to home</a>
+					<a href="index.html#research" class="back-link icon solid fa-arrow-left"> Back to home</a>
 					<header class="major">
 						<h2>Flow Physics and Nutrient Transport in Ciliates</h2>
 					</header>
 
 					<h3>Feeding of attached and swimming ciliates achieve hydrodynamic equivalence</h3>
-					<div class="media-grid single">
-						<img src="media/2024/08/Screenshot-2024-08-26-at-9.53.51-PM-1024x315.png" alt="" />
-					</div>
+					<figure>
+						<img src="media/2024/08/Screenshot-2024-08-26-at-9.53.51-PM-1024x315.png" width="1024" height="315" decoding="async" alt="Comparison of feeding in attached and swimming ciliates" />
+					</figure>
 					<p>Flow physics imposes no constraint on the feeding rates that are achievable by the swimming versus sessile strategies – they can both be equally competitive in transporting nutrients and wastes. The evolutionary pressures that shaped “swim” and “stay” strategies acted in concert with, not against, flow physics [2].</p>
 				</section>
 
 				<section id="peclet">
 					<h3>Optimal feeding of attached ciliates depends on Péclet number</h3>
-					<div class="media-grid single">
-						<img src="media/2024/08/Screenshot-2024-08-26-at-10.56.54-PM-1024x478.png" alt="" />
-						<img src="media/2024/08/Screenshot-2024-08-26-at-11.12.28-PM.png" alt="" />
-					</div>
-					<p class="caption">Concentration and flow field around a sessile ciliate corresponding to cilia beating in the first (left) and the second (right) mode. Colormap: concentration field, from 0% (light) to 100% (dark) of concentration background. Arrows: streamlines of flow field.</p>
+					<figure>
+						<div class="equal-row">
+							<img src="media/2024/08/Screenshot-2024-08-26-at-11.12.28-PM.png" style="--ar: 0.277" width="260" height="938" loading="lazy" decoding="async" alt="Colorbar: concentration from 0% to 100%" />
+							<img src="media/2024/08/Screenshot-2024-08-26-at-10.56.54-PM-1024x478.png" style="--ar: 2.142" width="1024" height="478" loading="lazy" decoding="async" alt="Concentration and flow fields for the first and second cilia beating modes" />
+						</div>
+						<figcaption>Concentration and flow field around a sessile ciliate corresponding to cilia beating in the first (left) and the second (right) mode. Colormap: concentration field, from 0% (light) to 100% (dark) of concentration background. Arrows: streamlines of flow field.</figcaption>
+					</figure>
 					<p>Under low Péclet number conditions, optimal feeding occurs via a ‘treadmill’ motion of surface cilia, regardless of the organism’s mobility. However, at high Péclet numbers, a symmetric dipolar surface velocity that keeps the organism stationary achieves near-optimal feeding performance for swimming ciliates and serves as an optimal solution for attached ciliates [1].</p>
 				</section>
 
 				<section id="gradient">
 					<h3>Feeding in non-uniform concentration field</h3>
-					<div class="media-grid single">
-						<video src="media/2023/11/pe10g01b05k2.mov" autoplay loop muted playsinline controls></video>
-					</div>
-					<p class="caption">Cross section of a 3D simulation of nutrients concentration evolution surrounding a sessile model ciliate feeding in a non-uniform concentration field. Surface motion and feeding follow horizontal axis-symmetry. Initial concentration field has a constant concentration gradient with higher on the right. Two concentration contour lines are at concentration level 20% (solid line), and at level 120% (dash line).</p>
+					<figure>
+						<video data-autoplay muted loop playsinline controls preload="none" poster="media/web/pe10g01b05k2.jpg" width="686" height="682" style="max-width:min(560px,100%);margin:0 auto">
+							<source src="media/web/pe10g01b05k2.mp4" type="video/mp4" />
+						</video>
+						<figcaption>Cross section of a 3D simulation of nutrients concentration evolution surrounding a sessile model ciliate feeding in a non-uniform concentration field. Surface motion and feeding follow horizontal axis-symmetry. Initial concentration field has a constant concentration gradient with higher on the right. Two concentration contour lines are at concentration level 20% (solid line), and at level 120% (dash line).</figcaption>
+					</figure>
 				</section>
 
 				<section id="references">
 					<h3>References</h3>
 					<ol class="refs">
-						<li>Liu, J., Man, Y., Costello, J. H., &amp; Kanso, E. (2025). <a href="https://arxiv.org/pdf/2404.13467">Optimal Feeding of Swimming and Attached Ciliates</a>. <em>Journal of Fluid Mechanics</em>, <em>1003</em>, A26.</li>
-						<li>Liu, J., Man, Y., Costello, J. H., &amp; Kanso, E. (2024). <a href="https://elifesciences.org/reviewed-preprints/99003v1">Feeding Rates in Sessile versus Motile Ciliates are Hydrodynamically Equivalent</a>. <em>eLife</em>, <em>13</em>.</li>
-						<li>Liu, J., Man, Y. &amp; Kanso, E. (2024). <a href="https://elifesciences.org/reviewed-preprints/99003v1">Nutrient Transport in Concentration Gradient</a>.</li>
+						<li>Liu, J., Man, Y., Costello, J. H., &amp; Kanso, E. (2025). <a href="https://arxiv.org/pdf/2404.13467">Optimal Feeding of Swimming and Attached Ciliates</a>. <span class="venue">Journal of Fluid Mechanics</span>, 1003, A26.</li>
+						<li>Liu, J., Man, Y., Costello, J. H., &amp; Kanso, E. (2024). <a href="https://elifesciences.org/reviewed-preprints/99003v1">Feeding Rates in Sessile versus Motile Ciliates are Hydrodynamically Equivalent</a>. <span class="venue">eLife</span>, 13.</li>
+						<li>Liu, J., Man, Y. &amp; Kanso, E. (2024). Nutrient Transport in Concentration Gradient.</li>
 					</ol>
 				</section>
 			</div>
@@ -93,6 +114,7 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/media.js"></script>
 
 	</body>
 </html>

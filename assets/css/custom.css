@@ -1,12 +1,61 @@
 /* Additions on top of Strata (main.css) for jingyiliu1900.github.io */
 
-/* Videos and figures inside the main column */
+/* ---------- Avatar: keep it round, not stretched ---------- */
+#header .image.avatar img {
+	width: 100%;
+	height: auto;
+	aspect-ratio: 1 / 1;
+	object-fit: cover;
+	border-radius: 100%;
+}
+
+/* ---------- Sidebar section nav ---------- */
+#header .side-nav {
+	list-style: none;
+	margin: 2em 0 0 0;
+	padding: 0;
+}
+
+#header .side-nav li {
+	padding: 0;
+	margin: 0 0 0.35em 0;
+}
+
+#header .side-nav a {
+	color: rgba(255, 255, 255, 0.55);
+	border-bottom: 0;
+	font-size: 0.95em;
+	letter-spacing: 0.02em;
+}
+
+#header .side-nav a:hover,
+#header .side-nav a:focus-visible {
+	color: #ffffff;
+}
+
+@media screen and (max-width: 980px) {
+	#header .side-nav {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 0.25em 1.25em;
+		margin-top: 1.5em;
+	}
+	#header .side-nav li { margin: 0; }
+}
+
+/* ---------- Media ---------- */
 #main video {
 	display: block;
 	width: 100%;
 	height: auto;
 	border-radius: 0.35em;
 	background: #000;
+}
+
+#main img {
+	max-width: 100%;
+	height: auto;
 }
 
 .media-grid {
@@ -20,11 +69,53 @@
 	grid-template-columns: minmax(0, 1fr);
 }
 
+.media-grid.three {
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@media screen and (max-width: 736px) {
+	.media-grid.three { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
 .media-grid img {
 	display: block;
 	width: 100%;
-	height: auto;
 	border-radius: 0.35em;
+}
+
+/* Small images (e.g. 252px flow maps) stay at native size instead of blurring */
+.media-grid img.native {
+	width: auto;
+	max-width: 100%;
+	justify-self: center;
+	align-self: center;
+}
+
+/* Images in a row at equal height: flex-grow = each image's aspect ratio
+   (set inline as style="--ar: w/h"), so widths are proportional to aspect. */
+.equal-row {
+	display: flex;
+	align-items: flex-start;
+	gap: 0.75em;
+	margin: 0 0 1.5em 0;
+}
+
+.equal-row > img {
+	flex: var(--ar) 1 0;
+	min-width: 0;
+	width: 0;
+	border-radius: 0.35em;
+}
+
+figure {
+	margin: 0 0 1.5em 0;
+}
+
+figcaption,
+.caption {
+	font-size: 0.9em;
+	color: #a2a2a2;
+	margin-top: 0.5em;
 }
 
 @media screen and (max-width: 480px) {
@@ -33,25 +124,112 @@
 	}
 }
 
-.caption {
-	font-size: 0.9em;
-	color: #a2a2a2;
-	margin-top: -0.75em;
-}
-
-/* Gallery thumbs: crop real figures to a uniform shape */
+/* ---------- Research gallery ---------- */
 .work-item .image.thumb img {
 	aspect-ratio: 370 / 217;
 	object-fit: cover;
-	background: #fff;
+	background: #000;
 }
 
-/* Reference list on research pages */
+.work-item .image.thumb.light img {
+	background: #fff;
+	object-fit: contain;
+}
+
+/* ---------- Side projects grid ---------- */
+.project-grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 2em;
+}
+
+.project-grid > article {
+	min-width: 0;
+}
+
+.project-grid h3 {
+	margin-top: 0.75em;
+}
+
+@media screen and (max-width: 736px) {
+	.project-grid { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* ---------- Publications ---------- */
 ol.refs li {
 	margin-bottom: 0.75em;
 }
 
+ol.refs .venue {
+	font-style: italic;
+}
+
+/* ---------- Misc ---------- */
 .back-link {
 	display: inline-block;
 	margin-bottom: 2em;
+}
+
+.muted {
+	color: #b2b2b2;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	* { scroll-behavior: auto !important; }
+}
+
+/* ---------- Narrower sidebar on wide screens ---------- */
+@media screen and (min-width: 981px) {
+	:root {
+		--sidebar: clamp(16rem, 22vw, 20rem);
+	}
+
+	#header {
+		width: var(--sidebar);
+		padding: 5em 2.25em 2.5em 2.25em;
+	}
+
+	#header h1 {
+		font-size: 1.15em;
+		line-height: 1.6em;
+	}
+
+	#header .image.avatar {
+		width: 5em;
+	}
+
+	/* Stack name, links and social icons together instead of pinning
+	   the icons to the bottom of the screen */
+	#header {
+		justify-content: flex-start;
+		overflow-y: auto;
+	}
+
+	#header > .inner {
+		flex-grow: 0;
+		margin-bottom: 0;
+	}
+
+	#header #footer {
+		margin-top: 2.5em;
+	}
+
+	#header #footer .icons {
+		white-space: nowrap;
+	}
+
+	#header #footer .icons li {
+		padding: 0 0.55em 0 0;
+	}
+
+	#header #footer .icons li:last-child {
+		padding-right: 0;
+	}
+
+	#main {
+		margin-left: var(--sidebar);
+		width: calc(100% - var(--sidebar));
+		max-width: 60em;
+		padding: 5em 3.5em 4em 3.5em;
+	}
 }

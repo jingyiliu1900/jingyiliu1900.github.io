@@ -4,25 +4,60 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html>
+<html lang="en">
 	<head>
-		<title>Jingyi Liu (Jenny) – Seeking art in physics</title>
+		<title>Jingyi Liu – Seeking art in physics</title>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="description" content="Jingyi Liu (Jenny), Theory Fellow at Janelia Research Campus, HHMI. Fluid dynamics, biophysics, and physics-aware machine learning." />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="Jingyi Liu, Theory Fellow at Janelia Research Campus, HHMI. Fluid dynamics, biophysics, cilia-driven flows, synchronization, and physics-aware machine learning." />
+		<meta name="author" content="Jingyi Liu" />
+		<link rel="canonical" href="https://jingyiliu1900.github.io/" />
+		<meta property="og:type" content="profile" />
+		<meta property="og:title" content="Jingyi Liu – Seeking art in physics" />
+		<meta property="og:description" content="Theory Fellow at Janelia Research Campus, HHMI. Fluid dynamics, biophysics, and physics-aware machine learning." />
+		<meta property="og:url" content="https://jingyiliu1900.github.io/" />
+		<meta property="og:image" content="https://jingyiliu1900.github.io/media/web/alphasmooth_rotor1000_e10_rand1_last10T.jpg" />
+		<meta name="twitter:card" content="summary_large_image" />
 		<link rel="icon" href="media/2024/09/cropped-xiaohei-1-270x270.jpeg" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/custom.css" />
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "Person",
+			"name": "Jingyi Liu",
+			"url": "https://jingyiliu1900.github.io/",
+			"image": "https://jingyiliu1900.github.io/images/profile.jpg",
+			"jobTitle": "Theory Fellow",
+			"worksFor": { "@type": "Organization", "name": "Janelia Research Campus, HHMI" },
+			"alumniOf": { "@type": "CollegeOrUniversity", "name": "University of Southern California" },
+			"knowsAbout": ["Fluid dynamics", "Biophysics", "PDE-constrained optimization", "Synchronization", "Physics-informed machine learning"],
+			"sameAs": [
+				"https://scholar.google.com/citations?user=dZQCYCwAAAAJ",
+				"https://github.com/jingyiliu1900",
+				"https://www.linkedin.com/in/jingyi-liu-887433216"
+			]
+		}
+		</script>
 	</head>
 	<body class="is-preload">
 
 		<!-- Header -->
 			<header id="header">
 				<div class="inner">
-					<a href="index.html" class="image avatar"><img src="media/2024/09/cropped-xiaohei-1-270x270.jpeg" alt="Jingyi Liu" /></a>
-					<h1><strong>I am Jingyi Liu (Jenny)</strong>, a Theory Fellow at Janelia Research Campus, HHMI. <br />
+					<a href="#about" class="image avatar"><img src="images/profile.jpg" width="400" height="400" alt="Portrait of Jingyi Liu" /></a>
+					<h1><strong>I am Jingyi Liu</strong>, a Theory Fellow at Janelia Research Campus, HHMI. <br />
 					Ph.D. in Mechanical Engineering, USC. <br />
 					Seeking art in physics.</h1>
+					<nav aria-label="Sections">
+						<ul class="side-nav">
+							<li><a href="#research">Research</a></li>
+							<li><a href="#publications">Publications</a></li>
+							<li><a href="#projects">Projects</a></li>
+							<li><a href="#ml-notes">ML &amp; Notes</a></li>
+							<li><a href="#contact">Contact</a></li>
+						</ul>
+					</nav>
 				</div>
 			</header>
 
@@ -30,7 +65,7 @@
 			<div id="main">
 
 				<!-- About -->
-					<section id="one">
+					<section id="about">
 						<header class="major">
 							<h2>Welcome to Jingyi's space.</h2>
 						</header>
@@ -39,44 +74,49 @@
 						<ul class="actions">
 							<li><a href="media/2026/06/CV_JingyiLiu_202606.pdf" class="button primary icon solid fa-file-pdf">CV</a></li>
 							<li><a href="https://scholar.google.com/citations?user=dZQCYCwAAAAJ&amp;hl=en&amp;oi=ao" class="button">Google Scholar</a></li>
+							<li><a href="https://github.com/jingyiliu1900" class="button icon brands fa-github">GitHub</a></li>
 						</ul>
 					</section>
 
-				<!-- Research gallery -->
-					<section id="two">
+				<!-- Research gallery (id="two" keeps the template's lightbox) -->
+					<section id="research">
 						<h2>Research</h2>
-						<div class="row">
+						<div class="row" id="two">
 							<article class="col-6 col-12-xsmall work-item">
-								<a href="media/2026/06/rotor1000F1_e10_rand1_stream_z0_lastT10ave.png" class="image fit thumb"><img src="media/2026/06/rotor1000F1_e10_rand1_stream_z0_lastT10ave.png" alt="" /></a>
-								<h3>Emergent surface activity synchronization and coherent flow in a spherical cavity</h3>
-								<p>Hydrodynamically coupled rotors lining a sphere self-organize into spiraling waves that drive cell-wide flows. <a href="#surface-activity">See more</a></p>
+								<a href="media/web/alphasmooth_rotor1000_e10_rand1_last10T.jpg" class="image fit thumb"><img src="media/web/alphasmooth_rotor1000_e10_rand1_last10T.jpg" width="960" height="720" loading="lazy" decoding="async" alt="Spiraling wave pattern of rotors on a sphere" /></a>
+								<h3>Coherent flow from surface activity in a spherical cavity</h3>
+								<p>Hydrodynamically coupled rotors lining a sphere self-organize into spiraling waves that drive cell-wide flows. <a href="#surface-activity">Current work</a></p>
 							</article>
 							<article class="col-6 col-12-xsmall work-item">
-								<a href="media/2023/11/pic1-1-1024x496.png" class="image fit thumb"><img src="media/2023/11/pic1-1-1024x496.png" alt="" /></a>
+								<a href="media/2023/11/pic1-1-1024x496.png" class="image fit thumb light"><img src="media/2023/11/pic1-1-1024x496.png" width="1024" height="496" loading="lazy" decoding="async" alt="Flow physics of ciliated microorganisms" /></a>
 								<h3>Flow physics and nutrient transport in ciliates</h3>
 								<p>Flow physics plays an important role in morphological evolution of unicellular ciliated eukaryotes. <a href="ciliates.html">Read more</a></p>
 							</article>
 							<article class="col-6 col-12-xsmall work-item">
-								<a href="media/2024/08/Screenshot-2024-08-26-at-10.56.54-PM-1024x478.png" class="image fit thumb"><img src="media/2024/08/Screenshot-2024-08-26-at-10.56.54-PM-1024x478.png" alt="" /></a>
-								<h3>Optimal feeding of attached ciliates depends on Péclet number</h3>
+								<a href="media/2024/08/Screenshot-2024-08-26-at-10.56.54-PM-1024x478.png" class="image fit thumb"><img src="media/2024/08/Screenshot-2024-08-26-at-10.56.54-PM-1024x478.png" width="1024" height="478" loading="lazy" decoding="async" alt="Concentration and flow fields around a sessile ciliate" /></a>
+								<h3>Optimal feeding depends on Péclet number</h3>
 								<p>Adaptive feeding strategies: optimal cilia motion depends on Péclet number. <a href="ciliates.html#peclet">Read more</a></p>
 							</article>
 							<article class="col-6 col-12-xsmall work-item">
-								<a href="media/2024/02/figure2-3-1024x1021.jpg" class="image fit thumb"><img src="media/2024/02/figure2-3-1024x1021.jpg" alt="" /></a>
+								<a href="media/2024/02/figure2-3-1024x1021.jpg" class="image fit thumb light"><img src="media/2024/02/figure2-3-1024x1021.jpg" width="1024" height="1021" loading="lazy" decoding="async" alt="Oscillators on a spherical surface" /></a>
 								<h3>Synchronization on spherical surface</h3>
 								<p>Phase synchronization of oscillators on the inner surface of a sphere filled with Stokes fluid. <a href="synchronization.html">Read more</a></p>
 							</article>
 						</div>
 					</section>
 
-				<!-- Surface activity -->
+				<!-- Current work -->
 					<section id="surface-activity">
-						<h2>Modeling: Emergent Surface Activity Synchronization and Coherent Fluid Flow in Spherical Cavity</h2>
+						<h2>Emergent Surface Activity Synchronization and Coherent Fluid Flow in Spherical Cavity</h2>
 						<div class="media-grid">
-							<video src="media/2026/06/alphasmooth_rotor1000_e00_rand1_last10T.mp4" autoplay loop muted playsinline controls></video>
-							<video src="media/2026/06/alphasmooth_rotor1000_e10_rand1_last10T.mp4" autoplay loop muted playsinline controls></video>
-							<img src="media/2026/06/rotor1000F1_e00_rand6_stream_z0_lastT10ave.png" alt="" />
-							<img src="media/2026/06/rotor1000F1_e10_rand1_stream_z0_lastT10ave.png" alt="" />
+							<video data-autoplay muted loop playsinline controls preload="none" poster="media/web/alphasmooth_rotor1000_e00_rand1_last10T.jpg" width="960" height="720">
+								<source src="media/web/alphasmooth_rotor1000_e00_rand1_last10T.mp4" type="video/mp4" />
+							</video>
+							<video data-autoplay muted loop playsinline controls preload="none" poster="media/web/alphasmooth_rotor1000_e10_rand1_last10T.jpg" width="960" height="720">
+								<source src="media/web/alphasmooth_rotor1000_e10_rand1_last10T.mp4" type="video/mp4" />
+							</video>
+							<img class="native" src="media/2026/06/rotor1000F1_e00_rand6_stream_z0_lastT10ave.png" width="252" height="253" loading="lazy" decoding="async" alt="Streamlines of the time-averaged flow in the cavity" />
+							<img class="native" src="media/2026/06/rotor1000F1_e10_rand1_stream_z0_lastT10ave.png" width="252" height="252" loading="lazy" decoding="async" alt="Streamlines of the time-averaged flow in the cavity" />
 						</div>
 						<p>During embryonic development, surface-bound intracellular activity generates coherent, cell-wide cytoplasmic flows. We built a minimal mathematical model in which surface activity is represented by hydrodynamically coupled rotors lining a spherical cavity. Within this model, surface activity self-organizes into coherent, spiraling wave patterns that generate robust, cell-wide flows in the enclosed cavity.</p>
 						<p>These results reveal a robust hydrodynamic mechanism by which local surface activity can generate coherent, cell-scale flows, independent of microscopic details of the underlying activity.</p>
@@ -84,10 +124,10 @@
 
 				<!-- Flow physics -->
 					<section id="flow-physics">
-						<h2>Modeling: Flow Physics in Living Systems</h2>
-						<div class="media-grid single">
-							<img src="media/2023/11/pic1-1-1024x496.png" alt="" />
-						</div>
+						<h2>Flow Physics in Living Systems</h2>
+						<figure>
+							<img src="media/2023/11/pic1-1-1024x496.png" width="1024" height="496" loading="lazy" decoding="async" alt="Overview of flow physics in ciliated microorganisms" />
+						</figure>
 						<h4>Takeaways on impact of flow physics</h4>
 						<ul>
 							<li>Flow physics plays an important role in morphological evolution of unicellular ciliated eukaryotes.</li>
@@ -95,77 +135,94 @@
 						</ul>
 						<p><strong>Adaptive Motion Strategy:</strong> Swimming ciliate chases and absorbs a food blob: 1. Always swim. 2. Swim, then stay.</p>
 						<div class="media-grid">
-							<video src="media/2024/10/visual_mot_blob1.mp4" autoplay loop muted playsinline controls></video>
-							<video src="media/2024/10/visual_mot_blob1_n12.mp4" autoplay loop muted playsinline controls></video>
+							<video data-autoplay muted loop playsinline controls preload="none" poster="media/web/visual_mot_blob1.jpg" width="960" height="720">
+								<source src="media/web/visual_mot_blob1.mp4" type="video/mp4" />
+							</video>
+							<video data-autoplay muted loop playsinline controls preload="none" poster="media/web/visual_mot_blob1_n12.jpg" width="960" height="720">
+								<source src="media/web/visual_mot_blob1_n12.mp4" type="video/mp4" />
+							</video>
 						</div>
 						<ul class="actions">
 							<li><a href="ciliates.html" class="button">Read More</a></li>
 						</ul>
 					</section>
 
-				<!-- Collective motion -->
-					<section id="collective-motion">
-						<h2>Modeling: Collective Motion in Living Systems</h2>
-						<p>Vicsek model: dynamics in 2D, periodic boundary conditions.<br />
-						3-zone model: dynamics in 3D, centered obstacle.</p>
-						<div class="media-grid">
-							<video src="media/2024/12/lollipops_simulation.mp4" autoplay loop muted playsinline controls></video>
-							<video src="media/2024/12/test.mp4" autoplay loop muted playsinline controls></video>
-						</div>
-						<div class="media-grid single">
-							<video src="media/2024/10/test006.mp4" autoplay loop muted playsinline controls></video>
-						</div>
-
-						<h3>Defensive wave of Honeybees</h3>
-						<div class="media-grid single">
-							<video src="media/2024/10/wave.mov" autoplay loop muted playsinline controls></video>
-						</div>
-						<p><a href="https://www.youtube.com/watch?v=8bNKU8GRYmU">Watch on YouTube</a></p>
+				<!-- Publications -->
+					<section id="publications">
+						<h2>Publications</h2>
+						<ol class="refs">
+							<li><strong>Liu, J.</strong>, Man, Y., Costello, J. H., &amp; Kanso, E. (2025). <a href="https://arxiv.org/pdf/2404.13467">Optimal Feeding of Swimming and Attached Ciliates</a>. <span class="venue">Journal of Fluid Mechanics</span>, 1003, A26.</li>
+							<li><strong>Liu, J.</strong>, Man, Y., Costello, J. H., &amp; Kanso, E. (2024). <a href="https://elifesciences.org/reviewed-preprints/99003v1">Feeding Rates in Sessile versus Motile Ciliates are Hydrodynamically Equivalent</a>. <span class="venue">eLife</span>, 13.</li>
+							<li><strong>Liu, J.</strong>, Man, Y., &amp; Kanso, E. (2024). Nutrient Transport in Concentration Gradient.</li>
+						</ol>
+						<p class="muted">Full list on <a href="https://scholar.google.com/citations?user=dZQCYCwAAAAJ&amp;hl=en&amp;oi=ao">Google Scholar</a>.</p>
 					</section>
 
-				<!-- ML -->
-					<section id="ml">
-						<h2>ML &amp; Physics</h2>
+				<!-- Side projects -->
+					<section id="projects">
+						<h2>More Projects</h2>
+
+						<article>
+							<h3>Collective Motion in Living Systems</h3>
+							<p>Vicsek model: dynamics in 2D, periodic boundary conditions.<br />
+							3-zone model: dynamics in 3D, centered obstacle.</p>
+							<div class="media-grid three">
+								<video data-autoplay muted loop playsinline controls preload="none" poster="media/web/lollipops_simulation.jpg" width="960" height="720">
+									<source src="media/web/lollipops_simulation.mp4" type="video/mp4" />
+								</video>
+								<video data-autoplay muted loop playsinline controls preload="none" poster="media/web/test.jpg" width="560" height="420">
+									<source src="media/web/test.mp4" type="video/mp4" />
+								</video>
+								<video data-autoplay muted loop playsinline controls preload="none" poster="media/web/test006.jpg" width="960" height="720">
+									<source src="media/web/test006.mp4" type="video/mp4" />
+								</video>
+							</div>
+						</article>
+
+						<div class="project-grid">
+							<article>
+								<video data-autoplay muted loop playsinline controls preload="none" poster="media/web/wave.jpg" width="960" height="592">
+									<source src="media/web/wave.mp4" type="video/mp4" />
+								</video>
+								<h3>Defensive Wave of Honeybees</h3>
+								<p><a href="https://www.youtube.com/watch?v=8bNKU8GRYmU">Watch the full video on YouTube</a></p>
+							</article>
+							<article>
+								<img src="media/2024/02/PIVlab_frame90-1024x576.jpg" width="1024" height="576" loading="lazy" decoding="async" alt="PIV analysis of airflow over a model car" style="border-radius:0.35em" />
+								<h3>DIY Lab: Aerodynamics Performance Testing</h3>
+								<p>Home made wind tunnel: plastic showcase, black T-shirt, battery, computer fan, GoPro, humidifier, car models. Car models: Porsche 911 GT3 RS, Lamborghini Aventador (scale 1:18). PIV analysis: Matlab.</p>
+								<p><strong>Conclusion:</strong> At low speeds, the Aventador outperforms the 911 GT3 RS, making it a better choice for those navigating daily traffic congestion in downtown LA or New York City. However, further analysis is needed to assess fuel efficiency.</p>
+							</article>
+						</div>
+					</section>
+
+				<!-- ML & Notes -->
+					<section id="ml-notes">
 						<div class="row">
 							<div class="col-6 col-12-small">
-								<h3>PINN for PDE solver with partially observed data</h3>
+								<h2>ML &amp; Physics</h2>
+								<h4>PINN for PDE solver with partially observed data</h4>
 								<ul class="actions">
 									<li><a href="media/2024/09/AME508_Project_Jingyi_Liu.pdf" class="button small icon solid fa-file-pdf">Project report</a></li>
 								</ul>
-							</div>
-							<div class="col-6 col-12-small">
-								<h3>Diffusion Model Learns Chaotic System</h3>
+								<h4>Diffusion Model Learns Chaotic System</h4>
 								<ul class="actions">
 									<li><a href="media/2026/06/Data-Assimilation-poster.pdf" class="button small icon solid fa-file-pdf">Poster</a></li>
 								</ul>
 							</div>
+							<div class="col-6 col-12-small">
+								<h2>Notes &amp; Lectures</h2>
+								<ul class="alt">
+									<li>Inverse problem: PDE-constraint optimization</li>
+									<li>First passage problem</li>
+									<li><a href="media/2024/12/Introduction-to-pattern-formation.pdf">Lecture on pattern formation</a> <span class="muted">(PDF, 31 MB)</span></li>
+								</ul>
+							</div>
 						</div>
-					</section>
-
-				<!-- Notes -->
-					<section id="notes">
-						<h2>Notes &amp; Lectures</h2>
-						<ul class="alt">
-							<li><a href="https://jingyiliu.net/wp-content/uploads/2024/08/Optimization_pde_constraint.pdf">Inverse problem: PDE-constraint optimization</a> (PDF)</li>
-							<li>First passage problem</li>
-							<li><a href="media/2024/12/Introduction-to-pattern-formation.pdf">Lecture on pattern formation</a> (PDF)</li>
-						</ul>
-					</section>
-
-				<!-- DIY -->
-					<section id="diy">
-						<h2>DIY Labs: Aerodynamics Performance Testing</h2>
-						<div class="media-grid single">
-							<img src="media/2024/02/PIVlab_frame90-1024x576.jpg" alt="PIV analysis of airflow over a model car" />
-						</div>
-						<p>Home made wind tunnel: plastic showcase, black T-shirt, battery, computer fan, GoPro, humidifier, car models.<br />
-						Car models: Porsche 911 GT3 RS, Lamborghini Aventador (scale 1:18).<br />
-						PIV analysis: Matlab.</p>
-						<p><strong>Conclusion:</strong> At low speeds, the Aventador outperforms the 911 GT3 RS, making it a better choice for those navigating daily traffic congestion in downtown LA or New York City. However, further analysis is needed to assess fuel efficiency.</p>
 					</section>
 
 				<!-- Contact -->
-					<section id="three">
+					<section id="contact">
 						<h2>Get In Touch</h2>
 						<div class="row">
 							<div class="col-6 col-12-small">
@@ -215,6 +272,7 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/media.js"></script>
 
 	</body>
 </html>

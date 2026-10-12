@@ -4,12 +4,20 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html>
+<html lang="en">
 	<head>
-		<title>Synchronization on Spherical Surface – Jingyi Liu (Jenny)</title>
+		<title>Synchronization on Spherical Surface – Jingyi Liu</title>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="description" content="Jingyi Liu (Jenny), Theory Fellow at Janelia Research Campus, HHMI. Fluid dynamics, biophysics, and physics-aware machine learning." />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="Phase synchronization of hydrodynamically coupled oscillators on the inner surface of a sphere, motivated by cilia-driven flow in embryo development." />
+		<meta name="author" content="Jingyi Liu" />
+		<link rel="canonical" href="https://jingyiliu1900.github.io/synchronization.html" />
+		<meta property="og:type" content="article" />
+		<meta property="og:title" content="Synchronization on Spherical Surface – Jingyi Liu" />
+		<meta property="og:description" content="Phase synchronization of hydrodynamically coupled oscillators on the inner surface of a sphere, motivated by cilia-driven flow in embryo development." />
+		<meta property="og:url" content="https://jingyiliu1900.github.io/synchronization.html" />
+		<meta property="og:image" content="https://jingyiliu1900.github.io/media/2024/02/figure2-3-1024x1021.jpg" />
+		<meta name="twitter:card" content="summary_large_image" />
 		<link rel="icon" href="media/2024/09/cropped-xiaohei-1-270x270.jpeg" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/custom.css" />
@@ -19,10 +27,19 @@
 		<!-- Header -->
 			<header id="header">
 				<div class="inner">
-					<a href="index.html" class="image avatar"><img src="media/2024/09/cropped-xiaohei-1-270x270.jpeg" alt="Jingyi Liu" /></a>
-					<h1><strong>I am Jingyi Liu (Jenny)</strong>, a Theory Fellow at Janelia Research Campus, HHMI. <br />
+					<a href="index.html" class="image avatar"><img src="images/profile.jpg" width="400" height="400" alt="Portrait of Jingyi Liu" /></a>
+					<h1><strong>I am Jingyi Liu</strong>, a Theory Fellow at Janelia Research Campus, HHMI. <br />
 					Ph.D. in Mechanical Engineering, USC. <br />
 					Seeking art in physics.</h1>
+					<nav aria-label="Sections">
+						<ul class="side-nav">
+							<li><a href="index.html#research">Research</a></li>
+							<li><a href="index.html#publications">Publications</a></li>
+							<li><a href="index.html#projects">Projects</a></li>
+							<li><a href="index.html#ml-notes">ML &amp; Notes</a></li>
+							<li><a href="index.html#contact">Contact</a></li>
+						</ul>
+					</nav>
 				</div>
 			</header>
 
@@ -30,16 +47,20 @@
 			<div id="main">
 
 				<section id="one">
-					<a href="index.html" class="back-link icon solid fa-arrow-left"> Back to home</a>
+					<a href="index.html#research" class="back-link icon solid fa-arrow-left"> Back to home</a>
 					<header class="major">
 						<h2>Synchronization on Spherical Surface</h2>
 					</header>
 					<p>The study of cilia-driven flow extends in embryo development, where the emergence of asymmetry is closely linked to the subsequent formation of asymmetric organs and morphological structures. Symmetry-breaking events, facilitated by ciliary-induced fluid flow, are observed across various species, including mice, Xenopus, zebrafish, etc. My interest lies in understanding of cilia function in the directional flow formation.</p>
-					<div class="media-grid single">
-						<img src="media/2024/02/figure2-3-1024x1021.jpg" alt="" />
-						<video src="media/2024/12/Untitled.mp4" autoplay loop muted playsinline controls></video>
-					</div>
-					<p class="caption">Phase synchronization of oscillators on inner spherical surface. Simulation of 2000 oscillators dynamics on upper hemisphere (left) and bottom hemisphere (right) surface. Consider Stokes flow inside the sphere.</p>
+					<figure>
+						<img src="media/2024/02/figure2-3-1024x1021.jpg" width="1024" height="1021" decoding="async" alt="Oscillators on a spherical surface" style="width:100%;max-width:min(640px,100%);display:block;margin:0 auto" />
+					</figure>
+					<figure>
+						<video data-autoplay muted loop playsinline controls preload="none" poster="media/web/Untitled.jpg" width="560" height="420">
+							<source src="media/web/Untitled.mp4" type="video/mp4" />
+						</video>
+						<figcaption>Phase synchronization of oscillators on inner spherical surface. Simulation of 2000 oscillators dynamics on upper hemisphere (left) and bottom hemisphere (right) surface. Consider Stokes flow inside the sphere.</figcaption>
+					</figure>
 					<ul class="actions">
 						<li><a href="index.html#surface-activity" class="button">Latest: coherent flow in a spherical cavity</a></li>
 					</ul>
@@ -69,6 +90,7 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/media.js"></script>
 
 	</body>
 </html>
