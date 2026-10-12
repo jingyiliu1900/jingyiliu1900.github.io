@@ -49,6 +49,9 @@
 	display: block;
 	width: 100%;
 	height: auto;
+	/* Shape comes from the inline aspect-ratio on each video; contain keeps
+	   the poster undistorted in Safari before the video loads. */
+	object-fit: contain;
 	border-radius: 0.35em;
 	background: #000;
 }
@@ -77,9 +80,15 @@
 	.media-grid.three { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
+.media-grid > * {
+	/* Safari stretches images and videos to the grid row height otherwise */
+	align-self: start;
+}
+
 .media-grid img {
 	display: block;
 	width: 100%;
+	height: auto;
 	border-radius: 0.35em;
 }
 
@@ -100,10 +109,15 @@
 	margin: 0 0 1.5em 0;
 }
 
-.equal-row > img {
-	flex: var(--ar) 1 0;
+.equal-row > div {
+	flex: var(--ar) 1 0%;
 	min-width: 0;
-	width: 0;
+}
+
+.equal-row > div > img {
+	display: block;
+	width: 100%;
+	height: auto;
 	border-radius: 0.35em;
 }
 
