@@ -247,3 +247,53 @@ ol.refs .venue {
 		padding: 5em 3.5em 4em 3.5em;
 	}
 }
+
+/* ---------- Sidebar: affiliation line under the name ---------- */
+#header .affil {
+	color: rgba(255, 255, 255, 0.45);
+	font-size: 0.9em;
+	line-height: 1.6em;
+	margin: 1em 0 0 0;
+}
+
+#header .affil em {
+	font-style: italic;
+	color: rgba(255, 255, 255, 0.6);
+}
+
+/* ---------- Short laptop screens: tighten the sidebar so it fits ---------- */
+@media screen and (min-width: 981px) and (max-height: 860px) {
+	#header {
+		padding-top: 2.75em;
+		padding-bottom: 1.5em;
+	}
+
+	#header .image.avatar {
+		margin-bottom: 0.75em;
+	}
+
+	#header h1 {
+		line-height: 1.5em;
+	}
+
+	#header .affil {
+		margin-top: 0.75em;
+	}
+
+	/* Section links wrap into a couple of short rows */
+	#header .side-nav {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: flex-end;
+		gap: 0.15em 1em;
+		margin-top: 1.25em;
+	}
+
+	#header .side-nav li {
+		margin: 0;
+	}
+
+	#header #footer {
+		margin-top: 1.25em;
+	}
+}
